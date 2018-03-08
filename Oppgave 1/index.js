@@ -7,10 +7,13 @@ window.onload = winInit;
 
 showSPVideo = function(){
     let a = document.getElementById("SPVideoDIV");
+    let b = document.getElementById("SPVideo");
     if(a.style.display === "none"){
         a.style.display = "block";
+        b.play();
     }else{
         a.style.display = "none";
+        b.pause();
     }
 }
 
@@ -22,7 +25,16 @@ runSlideShow = function(){
     let b = document.getElementById("mdgImg2");
     let c = document.getElementById("mdgImg3");
 
+    let aa = document.getElementById("mdgSound1");
+
     a.style.display = "block";
+    b.style.display = "none";
+    c.style.display = "none";
+    playMp3 = function(){
+        aa.play();
+    }
+
+    playMp3();
 
     function changeImage(){
         if(i >= 3){
@@ -51,7 +63,8 @@ runSlideShow = function(){
         }
         i = i + 1;
     }
-    setInterval(changeImage, 2500);
+        let slideShow = setInterval(changeImage, 2500);
+        let loopMusic = setInterval(playMp3, 500);
 }
 
 showDIV = function(htmlObject){
