@@ -7,7 +7,23 @@
 	</head>
 	
 	<body>	
-        <canvas></canvas>
+		<div style = "float: left;">
+			<canvas id = "myCanvas" height = "500px" width = "500px"></canvas>
+		</div>
+		<div id = "InputDIV">
+			<input type="number" class="inputFields" id = "Rødt"> Rødt <br>
+			<input type="number" class="inputFields" id = "SV"> SV <br>
+			<input type="numer" class="inputFields" id = "Ap"> Ap <br>
+			<input type="number" class="inputFields" id = "SP"> SP <br>
+			<input type="number" class="inputFields" id = "MDG"> MDG <br>
+			<input type="number" class="inputFields" id = "KrF"> KrF <br>
+			<input type="number" class="inputFields" id = "V"> V <br>
+			<input type="number" class="inputFields" id = "H"> H <br>
+			<input type="number" class="inputFields" id = "FrP"> FrP <br>
+			<input type="number" class="inputFields" id = "PIR"> PIR <br>
+				<button onclick="calculateResult();">Submit Data</button>
+				<button onclick="inputTestData();">Add Test Data</button>
+		</div>
     </body>
 	
 </html>
