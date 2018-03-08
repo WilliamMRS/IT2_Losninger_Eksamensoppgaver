@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <head>
+		<meta charset="utf-8" />
+		<title> Index </title> 
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src = "index.js"> </script>
+	</head>
+	
+	<body>	
+        <div id = "menuDIV">
+			<button class = "btn"><img class = "btnimg" src="../resources/ikoner/ap.png" alt=""></button>
+			<button class = "btn"><img class = "btnimg" src="../resources/ikoner/frp.jpg" alt=""></button>
+			<button class = "btn"><img class = "btnimg" src="../resources/ikoner/hoyre.png" alt=""></button>
+			<button class = "btn"><img class = "btnimg" src="../resources/ikoner/krf.jpg" alt=""></button>
+			<button class = "btn"><img class = "btnimg" src="../resources/ikoner/miljopartiet.png" alt="" onclick = "runSlideShow();"></button>
+			<button class = "btn"><img class = "btnimg" src="../resources/ikoner/piratpartiet.png" alt=""></button>
+			<button class = "btn"><img class = "btnimg" src="../resources/ikoner/raudt.png" alt=""></button>
+			<button class = "btn"><img class = "btnimg" src="../resources/ikoner/sp.png" alt="" onclick = "showSPVideo();" ></button>
+			<button class = "btn"><img class = "btnimg" src="../resources/ikoner/sv.jpg" alt=""></button>
+			<button class = "btn"><img class = "btnimg" src="../resources/ikoner/venstre.png" alt=""></button>
+		</div>
+		<div id = "SPVideoDIV" style = "display: none;">
+			<video width="320" height="180" controls>
+				<source src="../resources/senterpartiet.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			  </video>
+		</div>
+		<div id = "mdgSlideshowDIV" style = "display: block;">
+			<img src="../resources/bildegalleri01.jpg" alt="" width="320" height="240" id = "mdgImg1" style = "display: none;">
+			<img src="../resources/bildegalleri02.jpg" alt="" width="320" height="240" id = "mdgImg2" style = "display: none;">
+			<img src="../resources/bildegalleri03.jpg" alt="" width="320" height="240" id = "mdgImg3" style = "display: none;">
+		</div>
+    </body>
+	
+</html>
