@@ -7,7 +7,43 @@
 	</head>
 	
 	<body>	
-        
+		<div id = "resultsDIV" style = "display: none;">
+			Resultater:
+			<button onclick = "showDemoResults();">Legg inn Demodata</button><button onclick = "backToLogin();"> Tilbake til Login</button>
+			<p id = "resultsTable"></p>
+		</div>
+        <div id = "loginDIV">
+			<div>
+					Skriv inn passord:
+					<input id = "passwordInput" type="text">
+					<button onclick="login();">Log In</button>
+					<p id = "wrongPassword" style = "color: Red; display: none;" >Passord finnes ikke!</p>
+			</div>
+			<div style = "float: right;">
+				<button onclick = "showResults();">Opptelling</button>
+			</div>
+		</div>
+		<div id = "valgDIV" style = "display: none">
+			<div id = "menuDIV">
+					<button class = "btn"><img class = "btnimg" src="../resources/ikoner/ap.png" alt="" onclick = "confirmParty('ap');"></button>
+					<button class = "btn"><img class = "btnimg" src="../resources/ikoner/frp.jpg" alt="" onclick = "confirmParty('frp');"></button>
+					<button class = "btn"><img class = "btnimg" src="../resources/ikoner/hoyre.png" alt="" onclick = "confirmParty('hoyre');"></button>
+					<button class = "btn"><img class = "btnimg" src="../resources/ikoner/krf.jpg" alt="" onclick = "confirmParty('krf');"></button>
+					<button class = "btn"><img class = "btnimg" src="../resources/ikoner/miljopartiet.png" alt="" onclick = "confirmParty('miljopartiet');"></button>
+					<button class = "btn"><img class = "btnimg" src="../resources/ikoner/piratpartiet.png" alt="" onclick = "confirmParty('piratpartiet');"></button>
+					<button class = "btn"><img class = "btnimg" src="../resources/ikoner/raudt.png" alt="" onclick = "confirmParty('raudt');"></button>
+					<button class = "btn"><img class = "btnimg" src="../resources/ikoner/sp.png" alt="" onclick = "confirmParty('sp');"></button>
+					<button class = "btn"><img class = "btnimg" src="../resources/ikoner/sv.jpg" alt="" onclick = "confirmParty('sv');"></button>
+					<button class = "btn"><img class = "btnimg" src="../resources/ikoner/venstre.png" alt="" onclick = "confirmParty('venstre');"></button>
+			</div>
+			<h2 id = "bekreftSvar"></h2>
+			<div id = "bekreftKnapperDIV" style = "display: none">
+				<button onclick = "deliverAnswer();">JA</button><button onclick = "hideConfirmDIV();">NEI</button>
+			</div>
+		</div>
+		<div id = "takkDIV" style = "display: none">
+			<h2>Takk for at du stemte!</h2><button onclick = "backToLogin();">Tilbake til Login</button>
+		</div>
     </body>
 	
 </html>
