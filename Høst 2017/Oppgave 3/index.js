@@ -121,7 +121,7 @@ let results = {
                 break;
 
                 case "hoyre":
-                results.høyre += 1;
+                results.hoyre += 1;
                 break;
 
                 case "krf":
