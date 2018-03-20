@@ -1,0 +1,11 @@
+body {
+	background-color: white;
+}
+
+.canvasDIV{
+	width: 50%;
+}
+
+.imgFiles{
+	display: none;
+}
