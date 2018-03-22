@@ -2,10 +2,31 @@ body {
 	background-color: white;
 }
 
-.canvasDIV{
-	width: 50%;
-}
-
 .imgFiles{
 	display: none;
+}
+
+#canvasDIV{
+	position: relative;
+
+}
+
+#Controls{
+	position: relative;
+}
+
+.btn{
+	display: inline-block;
+	float: left;
+	margin: 0px;
+	width: 10%;
+	height: 75px;
+	background-color: skyblue;
+	font-size: 24px;
+}
+.btn:hover{
+	background-color: lightblue;
+}
+.btn:active{
+	background-color: darkcyan;
 }

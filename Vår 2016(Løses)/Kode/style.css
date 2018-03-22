@@ -1,3 +1,14 @@
 body {
 	background-color: white;
 }
+
+.cityimg{
+	float: left;
+	height: 250px;
+	width: 250px;
+}
+
+#cityimgDIV{
+	width: 750px;
+	margin: auto;
+}

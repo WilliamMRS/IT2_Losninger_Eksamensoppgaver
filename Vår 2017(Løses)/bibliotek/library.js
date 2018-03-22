@@ -12,62 +12,6 @@ FUNKSJONER SOM MANGLER:
  - Om du ser noe som kan forbedres gjerne lag en request på GitHub eller skriv om det i gruppechatten
  */
 
-function winInit() {
-	readCanvas = document.getElementById("myCanvas");
-	ctx = readCanvas.getContext("2d");
-
-	//Eksempel - Stolpediagram
-	drawColumnChart({
-		ctx: ctx,
-		xData: [1,2,3,4,5,6],
-		yData: [10, 20, 30, 10, 20, 30],
-		cvx: 25,
-		cvy: 250,
-		number: 6,
-		widthPx: 10,
-		yScale: 1,
-		barColor: "Darkblue",
-		textColor: "Red"
-	});
-	
-	//Eksempel - lese og skrive json data til en data.js fil.
-	console.log(jsonData.myData);
-	jsonData.myData[0] = "Switcheroo";
-	console.log(jsonData.myData);
-
-	//Eksempel HTML tabell
-	myDIV = document.getElementById("myDIV");
-	myDIV.innerHTML = drawHtmlTable();
-	
-	//Eksempel Canvas
-    drawText({
-        ctx: ctx,
-        x: 100,
-        y: 100,
-        fillstyle: "Green",
-        font: "36px Arial",
-        text: "This is Text",
-    });
-	drawFilledTriangle({
-		ctx: ctx,
-		x: 100,
-		y: 150,
-		height: 20,
-		width: 30,
-		color: "blue",
-	});
-	drawFilledPoly({
-		ctx: ctx,
-		x: 100,
-		y: 300,
-		radius: 20,
-		color: "Black",
-		linewidth: 2,
-		count: 7,
-	});
-}
-//window.onload = winInit;
-
 /*
     - - - - - - - - - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - - - - - - - - - -
     - - - - - - - - - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - - - - - - - - - -
@@ -90,7 +34,7 @@ function setArray(a, v) {
     }
 }
 
-//Does what it says. Returns maximum value of an array.
+//Returns maximum value of an array.
 function findMaxValue(array) {
 	let max, i;
 	max = array[0];
@@ -129,7 +73,6 @@ function randomNumber(maxNumber) {
 	}
 
 	Accessing json data from .txt files is a bit different. Here we use AJAX requests to GET the data and parse it to json.
-	*
 	COMING SOON
 	*
 	- - - - - - - - - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - - - - - - - - - -    
@@ -137,11 +80,7 @@ function randomNumber(maxNumber) {
 
 
 /*
-    - - - - - - - - - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - - - - - - - - - -
-    - - - - - - - - - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - - - - - - - - - -
     HTML Manipulative Funksjoner
-    - - - - - - - - - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - - - - - - - - - -
-    - - - - - - - - - - - - - - - - - - - - - - - -    - - - - - - - - - - - - - - - - - - - - - - - -
 */
 
 /*
@@ -188,11 +127,7 @@ function changeVisiblePage(frontPage, otherPage, otherPage2) {
 }
 
 /*
-    - - - - - - - - - - - - - - - - - - - - - - - -
-    - - - - - - - - - - - - - - - - - - - - - - - -
-    Canvas Functions *** Has to be redone with objects as parameters instead of arguments
-    - - - - - - - - - - - - - - - - - - - - - - - -
-    - - - - - - - - - - - - - - - - - - - - - - - -
+    Canvas Drawing Functions
 */
 
 /*options = {
