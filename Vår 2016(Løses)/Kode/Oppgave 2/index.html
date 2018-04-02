@@ -7,14 +7,25 @@
 	</head>
 	
 	<body>	
-		<div id = "språktestDIV">
+		<div className = "språktestDIV">
 			<div id = "welcomeDIV">
 					<h2>Velg en Språktest</h2>
 					<button class="btn" onclick = 'showAmericanTest();'>Amerikansk Språktest</button>
 					<button class="btn" onclick = "console.log('Finnes ikke enda')">Spansk Språktest</button>
 			</div>
-			<div id = "språktestapp">
-
+			<div id = "språktestapp" style = "display: none">
+				<p id = 'oppgtxt'>
+					Oppgavetekst
+				</p>
+				<audio id = "oversettingmp3" src="../../ressurser/Oversetting.mp3"></audio>
+				<button id = "mp3Button" class = "btn" onclick = "playMP3();" style = "display: none;">Play MP3</button>
+				<p id = "poengTeller">Poeng: </p>
+				<button id = "svar1" class="svarbtn" onclick = "checkAnswer('a');">Svar1</button>
+				<button id = "svar2" class="svarbtn" onclick = "checkAnswer('b');">Svar2</button>
+				<button id = "svar3" class="svarbtn" onclick = "checkAnswer('c');">Svar3</button>
+				<button id = "svar4" class="svarbtn" onclick = "checkAnswer('d');">Svar4</button>
+				<button id = "svar5" class="svarbtn" onclick = "checkAnswer('e');">Svar5</button>
+				<p id = "responsetxt"></p>
 			</div>
 		</div>
     </body>

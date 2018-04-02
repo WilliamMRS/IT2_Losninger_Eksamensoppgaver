@@ -2,8 +2,23 @@ body {
 	background-color: white;
 }
 
+.språktestDIV{
+	 text-align: center;
+}
+
 .btn{
 	padding: 10px;
 	font-size: 16px;
 	border-radius: 10px;
+}
+
+.svarbtn{
+	font-size: 16px;
+	padding: 20px;
+	padding-right: 5%;
+	padding-left: 5%;
+}
+
+#oppgtxt{
+	font-size: 46px;
 }
