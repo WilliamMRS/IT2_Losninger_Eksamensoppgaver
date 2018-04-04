@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <head>
+		<meta charset="utf-8" />
+		<title> Index </title> 
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src = "index.js"> </script>
+	</head>
+	
+	<body>	
+		<h2>Språk og Kulturreiser</h2>
+		<div class = "div" id = "bestillingsDiv" onchange="refreshComponents();">
+			<h3>Bestilling</h3>
+			<select name="" id="destinasjonSelect" onchange = "renderHotellSelection();">
+					<option value="null">Select Destination</option>
+					<option value="New York">New York</option>
+					<option value="St. Petersburg">St. Petersburg</option>
+					<option value="Amsterdam">Amsterdam</option>
+					<option value="Roma">Roma</option>
+				</select>
+		
+				<select name="" id="årstidSelect" onchange="renderRomPris();">
+					<option value="Sommer">Sommer</option>
+					<option value="Vinter">Vinter</option>
+				</select><br>
+
+						<div class = "inputdiv">
+							<p class = "inputFields">Antall Enkeltrom</p> <br><input type="number" value = 0 id = "enkeltRom">
+							<p class = "prisTag" id = "enkeltromPris">Pris:</p>
+						</div>
+						<div class = "inputdiv">
+							<p class = "inputFields">Antall Dobbeltrom</p> <br><input type="number" value = 0 id = "dobbeltRom">
+							<p class = "prisTag" id = "dobbeltromPris">Pris:</p>
+						</div>
+						<div class = inputdiv>
+							<p class = "inputFields">Kulturpass</p> <br>
+							<input id = "kulturpassCheck" type="checkbox">
+						</div>
+						
+						<br><br><br>
+				<p id = "hotellTekst"></p><select name="" id="hotellSelect"></select>
+		</div>
+
+		<div class = "div" id = "Oversikt">
+			<h3 style = "color: grey;">Oversikt</h3>
+			<div id="bestillingsDetaljer">
+
+			</div>
+		</div>
+    </body>
+	
+</html>
