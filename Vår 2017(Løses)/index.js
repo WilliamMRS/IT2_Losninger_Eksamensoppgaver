@@ -1,6 +1,8 @@
 /*jslint devel: true */
 
 function winInit() {
+    rotation = 0;
+
     canvas = document.getElementById("mainCanvas");
     ctx = canvas.getContext("2d");
 
@@ -10,30 +12,34 @@ function winInit() {
     bjoerkblad = document.getElementById("bjoerkblad");
     bjoerkblad2 = document.getElementById("bjoerkblad1");
     standard_bjoerk = document.getElementById("standard_bjoerk");
-    
-    renderFrame(ctx);
+
+    setInterval(renderFrame, 1000/60);
 }
 
 window.onload = winInit;
 
-renderFrame = function(ctx){
+drawRotatedImage = function(x, y, obj, angle){
+    console.log(obj.width);
+    console.log(obj.height);
+    ctx.translate(x + obj.width/2, y + obj.height/2);
+    ctx.rotate(angle * Math.PI/180);
+    ctx.drawImage(obj, -obj.width/2, -obj.height/2);
+    ctx.rotate(- angle * Math.PI/180);
+    ctx.translate(-x - obj.width/2, - y - obj.height/2);
+}
+
+renderFrame = function(){
+    rotation += 3;
     drawbackground(ctx);
     drawImages(ctx);
+    drawRotatedImage(701, 50, vindmolleBlad, rotation);
 }
 
 drawImages = function(ctx){
     ctx.drawImage(bjoerkblad,500,10);
     ctx.drawImage(bjoerkblad1,750,10);
     ctx.drawImage(vindmolleStolpe,700,50);
-    ctx.drawImage(vindmolleBlad,702,50);
-}
-
-spinObject = function(){
-
-}
-
-swayObject = function(){
-
+    //ctx.drawImage(vindmolleBlad,702,50);
 }
 
 drawbackground = function(ctx){
