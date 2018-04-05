@@ -1,16 +1,16 @@
 /*jslint devel: true */
 
 function winInit() {
-    const canvas = document.getElementById("mainCanvas");
-    const ctx = canvas.getContext("2d");
+    canvas = document.getElementById("mainCanvas");
+    ctx = canvas.getContext("2d");
 
     //Load Images
-    const vindmolleStolpe = document.getElementById("vindmolleStolpe");
-    const vindmolleBlad = document.getElementById("vindmolleBlad");
-    const bjoerkblad = document.getElementById("bjoerkblad");
-    const bjoerkblad2 = document.getElementById("bjoerkblad1");
-    const standard_bjoerk = document.getElementById("standard_bjoerk");
-
+    vindmolleStolpe = document.getElementById("vindmolleStolpe");
+    vindmolleBlad = document.getElementById("vindmolleBlad");
+    bjoerkblad = document.getElementById("bjoerkblad");
+    bjoerkblad2 = document.getElementById("bjoerkblad1");
+    standard_bjoerk = document.getElementById("standard_bjoerk");
+    
     renderFrame(ctx);
 }
 
