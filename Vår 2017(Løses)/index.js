@@ -14,38 +14,11 @@ function winInit() {
     standard_bjoerk = document.getElementById("standard_bjoerk");
     info = document.getElementById('info');
     windSound = document.getElementById('windSound');
-    orkanMusic = document.getElementById('orkanMusic');
-    orkan = false;
-
-    nyanCat = document.getElementById('nyanCat');
-
-    nyanLeader = new NyanCat(-12, randomNumber(600));
-    nyan1 = new NyanCat(-120, randomNumber(600));
-    nyan2 = new NyanCat(-24, randomNumber(600));
-    nyan3 = new NyanCat(-240, randomNumber(600));
-    nyan4 = new NyanCat(-112, randomNumber(600));
-    nyan5 = new NyanCat(-340, randomNumber(600));
-    nyan6 = new NyanCat(-230, randomNumber(600));
-    nyan7 = new NyanCat(-218, randomNumber(600));
-    nyan8 = new NyanCat(-101, randomNumber(600));
-    nyan9 = new NyanCat(-10, randomNumber(600));
-
-    nyanspeed = 10;
-
-    nyanLeaderSpeed = nyanspeed * randomNumber(3, 1);
-    nyan1speed = nyanspeed * randomNumber(3, 1);
-    nyan2Speed = nyanspeed * randomNumber(3, 1);
-    nyan3Speed = nyanspeed * randomNumber(3, 1);
-    nyan4Speed = nyanspeed * randomNumber(3, 1);
-    nyan5Speed = nyanspeed * randomNumber(3, 1);
-    nyan6Speed = nyanspeed * randomNumber(3, 1);
-    nyan7Speed = nyanspeed * randomNumber(3, 1);
-    nyan8Speed = nyanspeed * randomNumber(3, 1);
-    nyan9Speed = nyanspeed * randomNumber(3, 1);
 
     bladeRotation = 0;
     windSpeed = 0;
     setInterval(refreshProgram, 1000/60);
+    vindStille();
 }
 
 window.onload = winInit;
@@ -82,7 +55,6 @@ window.onload = winInit;
     windSpeed = 0.1;
     orkan = false;
     clearInterval(soundInterval);
-    orkanMusic.pause();
    }
 
    lettBris = function(){
@@ -94,7 +66,6 @@ window.onload = winInit;
     orkan = false;
     windSound.play();
     soundInterval = setInterval(playSound, 30000);
-    orkanMusic.pause();
    }
 
    stivKuling = function(){
@@ -106,7 +77,6 @@ window.onload = winInit;
     orkan = false;
     windSound.play();
     soundInterval = setInterval(playSound, 30000);
-    orkanMusic.pause();
    }
 
 refreshProgram = function(){
@@ -137,65 +107,11 @@ class NyanCat{
 }
 
 renderFrame = function(){
-    if(orkan === true){
-        updateVariables();
-        drawbackground();
-        drawRotatedImage(500, 0, standard_bjoerk, bladeRotation);
-        drawHouse();
-        drawRotatedImage(700, 500, vindmolleStolpe, bladeRotation);
-        drawRotatedImage(701, 50, vindmolleBlad, bladeRotation);
-
-        nyanLeader.flytt(nyanLeaderSpeed, 0);
-        nyanLeader.tegn();
-        nyan1.flytt(nyan1speed, 0);
-        nyan1.tegn();
-        nyan2.flytt(nyan2Speed, 0);
-        nyan2.tegn();
-        nyan3.flytt(nyan3Speed, 0);
-        nyan3.tegn();
-        nyan4.flytt(nyan4Speed, 0);
-        nyan4.tegn();
-        nyan5.flytt(nyan5Speed, 0);
-        nyan5.tegn();
-        nyan6.flytt(nyan6Speed, 0);
-        nyan6.tegn();
-        nyan7.flytt(nyan7Speed, 0);
-        nyan7.tegn();
-        nyan8.flytt(nyan8Speed, 0);
-        nyan8.tegn();
-        nyan9.flytt(nyan9Speed, 0);
-        nyan9.tegn();
-
-        if (nyanLeader.x > 1000) {
-            nyanLeader.x = -12; 
-
-            nyanLeaderSpeed = nyanspeed * randomNumber(3, 1);
-            nyan1speed = nyanspeed * randomNumber(3, 1);
-            nyan2Speed = nyanspeed * randomNumber(3, 1);
-            nyan3Speed = nyanspeed * randomNumber(3, 1);
-            nyan4Speed = nyanspeed * randomNumber(3, 1);
-            nyan5Speed = nyanspeed * randomNumber(3, 1);
-            nyan6Speed = nyanspeed * randomNumber(3, 1);
-            nyan7Speed = nyanspeed * randomNumber(3, 1);
-            nyan8Speed = nyanspeed * randomNumber(3, 1);
-            nyan9Speed = nyanspeed * randomNumber(3, 1);
-        }
-        if(nyan1.x > 1000) nyan1.x = -24;
-        if(nyan2.x > 1000) nyan2.x = -240;
-        if(nyan3.x > 1000) nyan3.x = -112;
-        if(nyan4.x > 1000) nyan4.x = -340;
-        if(nyan5.x > 1000) nyan5.x = -230;
-        if(nyan6.x > 1000) nyan6.x = -218;
-        if(nyan7.x > 1000) nyan7.x = -101;
-        if(nyan8.x > 1000) nyan8.x = -10;
-        if(nyan9.x > 1000) nyan9.x = -10;
-    }else{
         drawbackground();
         ctx.drawImage(standard_bjoerk,500,0);
         drawHouse();
         ctx.drawImage(vindmolleStolpe,700,50);
         drawRotatedImage(701, 50, vindmolleBlad, bladeRotation);
-    }
 }
 
 drawRotatedImage = function(x, y, obj, angle){
@@ -273,12 +189,4 @@ drawHouse = function(){ //draw House
         width: 250,
         color: "grey",
     });
-}
-
-superOrkan = function(){
-    console.log("lmaoo");
-    info.innerHTML = 'lmaoo';
-    windSpeed = 20;
-    orkan = true;
-    orkanMusic.play();
 }
