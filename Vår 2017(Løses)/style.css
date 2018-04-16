@@ -7,18 +7,17 @@ body {
 }
 
 #canvasDIV{
-	position: relative;
-
+	float: left;
 }
 
 #Controls{
-	position: relative;
+float: left;
 }
 
 .btn{
 	float: left;
 	margin: 0px;
-	width: 10%;
+	width: 30%;
 	height: 75px;
 	background-color: skyblue;
 	font-size: 24px;
@@ -39,7 +38,10 @@ body {
 	font-family: sans-serif;
 }
 
-.easteregg{
-	margin-left: 95%;
-	float: right;
+#wattKalkulator{
+
+}
+
+.inputField{
+	display: block;
 }

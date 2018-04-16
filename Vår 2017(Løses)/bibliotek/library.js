@@ -452,7 +452,7 @@ Needs an Eventlistener. Use document.addEventListener(); to make it useable (see
 function keyDownHandler(e) {
 	"use strict";
 	if (e.keyCode === 13) {
-		console.log("Enter was pressed");
+		//console.log("Enter was pressed");
     }
 }
 document.addEventListener("keydown", keyDownHandler, false);
@@ -467,7 +467,7 @@ window.onclick = function (e) {
 	var mX, mY;
 	mX = e.pageX;
 	mY = e.pageY;
-	console.log(mX + " " + mY);
+	//console.log(mX + " " + mY);
 };
 
 /*
