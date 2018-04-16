@@ -26,17 +26,19 @@
 		<div id = "wattKalkulatorRutine">
 			<h3> Rutine for wattproduksjon per dag</h3>
 			<div class = "inputField">
-			<input type="nummber"> <p>Kl 00:00 - 05:59</p>
+			<input id = "data1" type="nummber"> <p style = "margin: 0px; padding: 0px; display: inline-block;">Kl 02:00 - 07:59</p>
 			</div>
 			<div class = "inputField">
-			<input type="nummber"> <p>Kl 06:00 - 11:59</p>
+			<input id = "data2" type="nummber"> <p style = "margin: 0px; padding: 0px; display: inline-block;">Kl 08:00 - 13:59</p>
 			</div>
 			<div class = "inputField">
-			<input type="nummber"> <p>Kl 12:00 - 17:59</p>
+			<input id = "data3" type="nummber"> <p style = "margin: 0px; padding: 0px; display: inline-block;">Kl 14:00 - 19:59</p>
 			</div>
 			<div class = "inputField">
-			<input type="nummber"> <p>Kl 18:00 - 23.59</p>
+			<input id = "data4" type="nummber"> <p style = "margin: 0px; padding: 0px; display: inline-block;">Kl 20:00 - 01.59</p>
 			</div>
+			<button onclick = "calculateWattProductionPerDay();">Submit</button>
+			<h5 id = "calculatedResult">Total Wattproduksjon: </h5>
 		</div>
 		<div id = "Controls">
 			<button class="btn" onclick = "vindStille();">Stille</button>

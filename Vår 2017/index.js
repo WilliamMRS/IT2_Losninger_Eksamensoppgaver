@@ -74,6 +74,23 @@ function winInit() {
 
 window.onload = winInit;
 
+calculateWattProductionPerDay = function(){
+    data1 = document.getElementById("data1").value;
+    data2 = document.getElementById("data2").value;
+    data3 = document.getElementById("data3").value;
+    data4 = document.getElementById("data4").value;
+
+    calculatedResult = document.getElementById("calculatedResult");
+
+    let a = calculateWattProduction(data1) * 6;
+    let b = calculateWattProduction(data2) * 6;
+    let c = calculateWattProduction(data3) * 6;
+    let d = calculateWattProduction(data4) * 6;
+
+    calculatedResult.innerHTML = ("Total Wattproduksjon: " + (a+b+c+d));
+
+}
+
 calculateWattProduction = function(definedMetersPerSecond){
     let a = metersPerSecond.value;
     let b = 0;
